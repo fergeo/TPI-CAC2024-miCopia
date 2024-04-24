@@ -1,0 +1,39 @@
+.cleaning{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url("../../img/bg-register.jpg"); 
+    background-repeat: repeat;
+    background-attachment: scroll;
+
+    height: 100vh;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.seccion_volver{
+    height: 100px !important;
+    padding-left: 50px;
+    padding-top: 15px !important;
+    height: 100px;
+}
+
+.seccion_volver a{
+    font-size: 30px !important;
+}
+
+.section_register{
+    width: 100%;
+    text-align: center;
+    opacity: 1;
+}
+
+.form_reg{
+    width: 50%;
+}
