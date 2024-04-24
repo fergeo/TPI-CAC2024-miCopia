@@ -32,8 +32,37 @@ main{
     width: 100%;
     text-align: center;
     opacity: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .form_reg{
-    width: 50%;
+    width: 40%;
+    background-color: black;
+    border-radius: 10px;
+
+    padding-top: 10px;
+}
+
+input::placeholder{
+    font-size: .8rem;
+    /*text-align: left;*/
+    vertical-align: top;
+}
+input[type=email],input[type=text],input[type=date], input[type=password], select{
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    background-color: var(--clr-grey);
+    border: 1.5px solid var(--clr-white);
+    border-radius: 90vmax;
+    box-sizing: border-box;
+}
+input[type=email]:focus,input[type=text]:focus,input[type=date]:focus, input[type=password]:focus, select:focus {
+    outline: none;
+    border: 2px solid var(--clr-mora);
+}
+input[type=date]{
+    color: var(--clr-white);
 }

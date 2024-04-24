@@ -45,7 +45,7 @@ Promise.all([cargarJSON(urlJSON1),cargarJSON(urlJSON2),cargarJSON(urlJSON3)])
         });
 
 
-        anime = document.querySelector(".series")
+        series = document.querySelector(".series")
 
         data2.series.forEach( element => {
 
@@ -54,7 +54,7 @@ Promise.all([cargarJSON(urlJSON1),cargarJSON(urlJSON2),cargarJSON(urlJSON3)])
             imagen.src = element.img
             imagen.classList.add('imgAclamadas')
             divElement.appendChild(imagen)
-            anime.appendChild(divElement)
+            series.appendChild(divElement)
     
             divElementTtl = document.createElement('div')
             h4Element = document.createElement('h4')

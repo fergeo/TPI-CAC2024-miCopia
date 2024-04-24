@@ -298,7 +298,7 @@ input[type=button]:hover{
     text-shadow: 1px 1px var(--clr-grey);
     letter-spacing: .1rem;
 }
-.peliculasAclamadas, .anime, .seires, .videoJuegos{
+.peliculasAclamadas, .anime, .series, .viedoJuegos{
     flex-wrap: nowrap;
     overflow-x: scroll;
     overflow-y: hidden;
