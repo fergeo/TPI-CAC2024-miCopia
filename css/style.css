@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 
@@ -27,10 +28,6 @@
     background: var(--clr-grey); 
 }
 /*end SCROLL BAR*/
-.cleaning{
-    margin: 0;
-    padding: 0;
-}
 
 *{
     margin: 0;
@@ -46,7 +43,7 @@ body{
     background-color: var(--clr-black);
 }
 
-.nav-izquierdo{
+nav{
     background-color: var(--clr-mora);
     height: 4rem;
     width: 100%;
@@ -55,6 +52,17 @@ body{
     position: fixed;
     padding-top: 1rem;
     z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    
+}
+/* responsive */
+@media (max-width:750px){
+    nav{
+        flex-direction: column;
+        align-items: center;
+        height: 100px;
+    }
     
 }
 .centrar{
@@ -101,12 +109,9 @@ li{
 .logo{
     padding-left: .7rem;
     color: var(--clr-white);
-    float: left;
+    /* float: left; */
 }
 
-.listNav{
-    float: right;
-}
 
 .img_ppal_texto{
     align-items: center;
@@ -115,20 +120,139 @@ li{
 }
 
 .img_ppal{
+    
     background: url("../img/img_ppal.jpg") center center fixed;
     background-size: cover;
     opacity: 0.9;
     width: 100%;
-    height: 100vh;
-
-    margin-top: 0;
-
+    height: 95vh;
     display: flex;
     align-items: center;
     justify-content: center; 
 }
 
-/*--------------------------------------------*/
+.busqueda{
+    width: 100%;
+    height: 30vh;
+}
+
+.input_text{
+    color: var(--clr-white);
+    font-size: 1.2rem;
+    margin-top: .7rem;
+    padding-inline-start: 1.5rem;
+    width: 70vh;
+    height: 5vh;
+    background-color: var(--clr-grey);
+    border: 1.5px solid var(--clr-white);
+    border-radius: 90vmax;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.input_text::-webkit-search-cancel-button{
+    position:relative;
+    right:20px;
+}
+
+.tendencia{
+    width: 100%;
+}
+
+.imgTendencia{
+    width: 100%;
+    max-width: 15rem;
+    opacity: .88;
+    border-radius: 10px;
+}
+.cardPelicula{
+    position: relative;
+    text-align: center;
+    
+}
+.ttlMovie{
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.btnTendencia{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5rem;
+}
+
+.cardPelicula:hover{
+    transform: rotateY(-180deg);
+    filter: drop-shadow(4px 4px 2px var(--clr-red));
+    border-radius: .5rem;
+}
+.cardPelicula{
+
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.card-face{
+    position: relative;/*cambie absoluta por relativa*/
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+/*.card-front{
+
+}*/
+.card-back{
+    
+    transform: rotateY(180deg);
+    box-shadow: 2px 2px 2px 2px rgba(1, 1, 1, 0.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*END SECCION TENDENCIAS*/
+
+
+/* modificaciones a footer */
+footer{
+    /* position: relative; */
+    bottom: 0;
+    width: 100%;
+    /* height: 60px; */
+    background-color: var(--clr-mora);
+}
+.footer_ppal{
+    margin-left: 1.5rem;
+    padding-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    li{
+        margin: 0 20px;
+    }
+}
+
+/*FORMULARIO DE REGISTRO*/
+
+.body-registro{
+    background-image: url("../img/bg-register.jpg") !important; 
+    background-repeat: repeat;
+    background-size: 100%;
+    background-attachment: scroll;
+}
 
 input::placeholder{
     font-size: .8rem;
@@ -162,7 +286,21 @@ select{
     color: var(--clr-white);
 }
 
+.section_register{
+    border-radius: .4rem;
+    padding: .3rem;
+    display: block;
+    background-color: var(--clr-black);
+    margin: 3rem auto;
+    max-width: 20%;
+}
+.form_reg{
+    text-align: center;
+    padding: 0 1.5rem 0 1.5rem ;
+}
+
 .terminos{
+    
     color: var(--clr-white);
     font-size: .6rem;
     margin-left:.2rem;
@@ -182,107 +320,27 @@ input[type=button]:hover{
 }
 
 .terminos_y_condiciones{
-    padding-left: 1rem;
-    padding-bottom: 1rem;
-    margin-top: .5rem;
+    margin-top: 1rem;
     display: flex;
-    text-align: left;
+    /* text-align: left; */
     color: var(--clr-white);
     text-decoration: none;
     font-size: .7rem;
+    justify-content: center;
 }
 
-
-.busqueda{
-    width: 100%;
-    height: 30vh;
+/*ICONO PARA VOLVER AL INDEX DESDE EL REGISTRO*/
+.volver{
+    color: #e7e2e2;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 500;
 }
-
-.input_text{
-    color: var(--clr-white);
-    font-size: 1.2rem;
-    margin-top: .7rem;
-    padding-inline-start: 1.5rem;
-    width: 70vh;
-    height: 5vh;
-    background-color: var(--clr-grey);
-    border: 1.5px solid var(--clr-white);
-    border-radius: 90vmax;
-    box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.5);
+.seccion_volver{
+    margin: 1.5rem; 
 }
-
-.input_text::-webkit-search-cancel-button{
-    position:relative;
-    right:20px;
-}
-
-/*BEGIN SECCION TENDENCIAS*/
-.tendencia{
-    width: 100%;
-}
-/*.peliculasTendencia{
-
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 1rem;
-
-}*/
-.peliculasTendencia{
-    background-color: lightskyblue;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 1rem;
-}
-
-.imgTendencia{
-    width: 100%;
-    max-width: 15rem;
-    opacity: .88;
-    border-radius: 10px;
-}
-.cardPelicula{
-    position: relative;
-    text-align: center;
-    
-}
-.ttlMovie{
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.btnTendencia{
-    margin: 1.5rem;
-}
-
-.cardPelicula:hover{
-    transform: rotateY(180deg);
-    box-shadow: 0px 0px 2px 2px rgba(28, 214, 37, 0.815);
-    border-radius: 10PX;
-}
-.cardPelicula{
-
-    transform-style: preserve-3d;
-    transition: transform 0.5s;
-}
-
-.card-face{
-    position: relative;/*cambie absoluta por relativa*/
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-}
-/*.card-front{
-
-}*/
-.card-back{
-    
-    transform: rotateY(180deg);
-    box-shadow: 2px 2px 2px 2px rgba(1, 1, 1, 0.2);
-}
-/*END SECCION TENDENCIAS*/
+/*FIN ICONO PARA VOLVER AL INDEX DESDE EL REGISTRO*/
+/*FIN FORMULARIO DE REGISTRO*/
 
 /*TITULOS SUBTITULOS*/
 .ttlPpal{
@@ -298,13 +356,13 @@ input[type=button]:hover{
     text-shadow: 1px 1px var(--clr-grey);
     letter-spacing: .1rem;
 }
-.peliculasAclamadas, .anime, .series, .viedoJuegos{
+.peliculasAclamadas, .anime, .series, .video-juegos{
     flex-wrap: nowrap;
     overflow-x: scroll;
     overflow-y: hidden;
     width: 90%;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: baseline;
     margin-bottom: .8rem;
 }
@@ -317,39 +375,3 @@ input[type=button]:hover{
 .ttlAnime, .ttlSeries, .ttlVideoJuegos{
     text-align: center;
 }
-
-/* modificaciones a footer */
-footer{
-    /* position: relative; */
-    bottom: 0;
-    width: 100%;
-    /* height: 60px; */
-    background-color: var(--clr-mora);
-}
-.footer_ppal{
-    margin-left: 1.5rem;
-    padding-top: 1.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    li{
-        margin: 0 20px;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
