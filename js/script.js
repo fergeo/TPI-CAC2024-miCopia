@@ -11,16 +11,41 @@ function cargarJSON(url) {
         })
 }
 
-const urlJSON1 = 'anime.json';
-const urlJSON2 = 'series.json';
-const urlJSON3 = 'videoJuegos.json';
+const urlJSON0 = 'peliculasAclamadas.json'
+const urlJSON1 = 'anime.json'
+const urlJSON2 = 'series.json'
+const urlJSON3 = 'videoJuegos.json'
 
 // Cargar los archivos JSON
-Promise.all([cargarJSON(urlJSON1),cargarJSON(urlJSON2),cargarJSON(urlJSON3)])
+Promise.all([cargarJSON(urlJSON0),cargarJSON(urlJSON1),cargarJSON(urlJSON2),cargarJSON(urlJSON3)])
     .then(data => {
-        const data1 = data[0];
-        const data2 = data[1];
-        const data3 = data[2];
+        const data0 = data[0]
+        const data1 = data[1]
+        const data2 = data[2]
+        const data3 = data[3]
+
+        aclamadas = document.querySelector(".peliculasAclamadas")
+
+        data0.aclamadas.forEach( element => {
+
+            divElement = document.createElement('div')
+            imagen = document.createElement('img')
+            imagen.src = element.img
+            imagen.classList.add('imgAclamadas')
+            divElement.appendChild(imagen)
+            aclamadas.appendChild(divElement)
+    
+            divElementTtl = document.createElement('div')
+            h4Element = document.createElement('h4')
+            h4Element.style.fontSize = "25px"
+            h4Element.classList.add('ttlAclamadas')
+            texto = document.createTextNode(element.name)
+            h4Element.appendChild(texto)
+            divElementTtl.appendChild(h4Element)
+            divElement.appendChild(divElementTtl)
+            
+        });
+
 
         anime = document.querySelector(".anime")
 
@@ -68,7 +93,7 @@ Promise.all([cargarJSON(urlJSON1),cargarJSON(urlJSON2),cargarJSON(urlJSON3)])
         });
 
 
-        videoJuegos = document.querySelector(".viedoJuegos")
+        videoJuegos = document.querySelector(".videoJuegos")
 
         data3.videoJuegos.forEach( element => {
 

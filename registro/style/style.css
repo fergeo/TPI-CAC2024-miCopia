@@ -11,12 +11,6 @@ body{
     height: 100vh;
 }
 
-main{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
 .seccion_volver{
     height: 100px !important;
     padding-left: 50px;
@@ -28,20 +22,27 @@ main{
     font-size: 30px !important;
 }
 
-.section_register{
-    width: 100%;
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.section-registro{
+    width: 90%;
     text-align: center;
     opacity: 1;
     display: flex;
     justify-content: center;
 }
 
-.form_reg{
-    width: 40%;
+.form-registro{
+    width: 600px;
     background-color: black;
     border-radius: 10px;
 
     padding-top: 10px;
+    padding-bottom: 20px;
 }
 
 input::placeholder{
@@ -54,6 +55,7 @@ input[type=email],input[type=text],input[type=date], input[type=password], selec
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
+    color: white;
     background-color: var(--clr-grey);
     border: 1.5px solid var(--clr-white);
     border-radius: 90vmax;
@@ -66,3 +68,4 @@ input[type=email]:focus,input[type=text]:focus,input[type=date]:focus, input[typ
 input[type=date]{
     color: var(--clr-white);
 }
+
